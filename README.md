@@ -10,9 +10,12 @@ Some assumptions and decisions have been made by the developer due to time limit
    No distributed multi-nodes framework, such as Spark, is used in this task.
 
 ## How to build and run.
-This requires Docker Desktop installed. Also only the shell scripts are provided for Linux.
+This requires Docker Desktop and docker compose are installed.
 
-In Mac OS, either change the shell interpreter to /bin/zsh in each shell scripts or run the
+The shell scripts provied are tested in Ubuntu, Mac OS and Windows WSL.
+In Windows, please install WSL (Windows Subsystem) and Ubunut.
+
+If there is any issue in running the shell scripts, you can run the
 commands in shell scripts directly.
 
 For Windows, please use WSL(Windows Subsystem for Linux) and Ubuntu.
@@ -39,7 +42,7 @@ All data files must be in revenue_nsw/app/data folders.
 ./etl.sh /data/<data-file1> /data/<data-file2> ...
 ```
 
-For example, I have added 2 data files with exact same contents from the data file provided.
+For example, I have added 2 data files with exactly the same contents as the data file provided.
 ```
 revenue_nsw/app/data/member-data.csv
 revenue_nsw/app/data/member-data-copy.csv
