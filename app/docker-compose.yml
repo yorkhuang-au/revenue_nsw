@@ -1,0 +1,22 @@
+# Use root/example as user/password credentials
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  etl:
+    build:
+      context: .
+      target: prod
+      no_cache: true
+    volumes:
+      - ./data:/data
+    restart: always
+    environment:
+      MONGODB_ADMINUSERNAME: root
+      MONGODB_ADMINPASSWORD: example
+      MONGODB_URL: mongodb://root:example@mongo:27017/
