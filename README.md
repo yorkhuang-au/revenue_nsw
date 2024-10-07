@@ -27,7 +27,7 @@ cd revenue_nsw
 In the revenue_nsw/ folder, run unit test as below.
 
 ```
-./unitest.sh
+./unittest.sh
 ```
 
 ### Run ETL
